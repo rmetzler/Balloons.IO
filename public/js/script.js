@@ -1,5 +1,5 @@
 	$(document).ready(function(){
-		var socket = io.connect('http://localhost');
+		var socket = io.connect();
 		socket.emit('set nickname',{room_id:$('#room_id').text(),'nickname':$('#username').text()});
 		
 		socket.on('new user',function(data){
