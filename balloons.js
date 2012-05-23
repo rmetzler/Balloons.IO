@@ -131,6 +131,7 @@ io.sockets.on('connection', function (socket) {
 	});
 });
 
-app.listen(3000);
+app.listen(3000, function(){
+  console.log('Balloons.io started at port %d', app.address().port);  
+});
 
-console.log('Balloons.io started at port %d', app.address().port);
